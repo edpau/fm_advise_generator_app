@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Screenshot
 
-<img src="./assets/images/screenshot.png" alt="Screenshot" width="300"/>
+<img src="./images/screenshot.png" alt="Screenshot" width="300"/>
 
 ### Links
 
