@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](https://github.com/edpau/fm_recipe-page)
-- [Live Site URL](https://edpau.github.io/fm_recipe-page/)
+- [Solution URL](https://github.com/edpau/fm_advise_generator_app)
+- [Live Site URL](https://edpau.github.io/fm_advise_generator_app/)
 
 ## My process
 
