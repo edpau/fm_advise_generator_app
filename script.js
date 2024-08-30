@@ -94,4 +94,4 @@ function init() {
 }
 
 // Initialization call
-// init();
+init();
