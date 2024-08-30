@@ -1,0 +1,192 @@
+/*----------------------------
+	Visually hidden helper
+----------------------------*/
+.sr-only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+  }
+
+
+  /*---------------------------
+ ** Variables
+-----------------------------*/
+:root {
+  --color-primary: hsl(218, 23%, 16%);
+  --color-secondary: hsl(217, 19%, 24%);
+  --color-third: hsl(217, 19%, 38%);
+  --color-text-card-heading: hsl(150, 100%, 66%);
+  --color-text-card-paragraph: hsl(193, 38%, 86%);
+
+
+
+  --font-primary:  "Manrope", sans-serif;
+
+  --color-button-primary-bg: hsl(150, 100%, 66%);
+  --color-dice-bg:  hsl(218, 23%, 16%);
+
+}
+  /*----------------------------
+	Base
+----------------------------*/
+
+
+body {
+  font-family: var(--font-primary);
+  font-optical-sizing: auto;
+  font-size: 1rem;
+  background-color: var(--color-primary);
+}
+
+main {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 120px;
+  align-items: center;
+  gap: 40px;
+}
+
+  /*----------------------------
+Advice component
+----------------------------*/
+
+.advice {
+  position: relative;
+  width: 91.5%;
+  min-height: 315px;
+  background-color: var(--color-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 40px 24px 0px;
+  border-radius: 10px;
+}
+
+
+
+.advice_title {
+  text-transform: uppercase;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  line-height: 100%;
+  line-height: 1.4;
+  letter-spacing: 3.46px;
+  color: var(--color-text-card-heading);
+}
+
+.advice__text {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: -0.26px;
+  color: var(--color-text-card-paragraph);
+  text-align: center;
+}
+
+.advice__text--error {
+  color: red;
+}
+
+.advice__line-break{ 
+  width: 100%;
+  height: 16px;
+  background: url("../images/pattern-divider-mobile.svg") no-repeat center;
+  border: 0;
+  margin-bottom: 50px;
+}
+
+.advice_button {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: none;
+  background-color: var(--color-button-primary-bg);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+
+  position: absolute;
+  bottom: -32px;
+}
+
+.advice_button:hover {
+  box-shadow: 0 0px 15px 2px var(--color-button-primary-bg)
+}
+
+.advice__button-icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor; /* Ensures the SVG inherits the button's text color */
+}
+
+/*----------------------------
+loading state
+----------------------------*/
+.advice__loading {
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+.advice__loading--show {
+  visibility: visible;
+}
+
+.advice__loading-icon {
+  font-size: 40px;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+/*----------------------------
+Media Query
+----------------------------*/
+
+@media (min-width: 48rem) { /* 768px */
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+  }
+
+  .advice{
+    max-width: 540px;
+    min-height: 332px;
+    padding: 48px 48px 0px;
+  }
+  .advice_title {
+    font-size: 0.8125rem;
+  }
+
+  .advice__text {
+    font-size: 1.75rem; 
+    margin-bottom: 16px;
+  }
+
+  .advice__line-break{ 
+    background: url("../images/pattern-divider-desktop.svg") no-repeat center;
+  }
+}
+
+
+
