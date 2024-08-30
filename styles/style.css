@@ -159,7 +159,7 @@ loading state
 Media Query
 ----------------------------*/
 
-@media (min-width: 48rem) { /* 768px */
+@media (min-width: 21rem) { 
 
   main {
     display: flex;
